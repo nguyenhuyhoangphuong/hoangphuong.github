@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="csdl1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chon">
+    <Key>
+      <PropertyRef Name="id_l" />
+    </Key>
+    <Property Name="id_l" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="the_loai" Type="nvarchar" MaxLength="100" />
+    <Property Name="ten" Type="nvarchar" MaxLength="100" />
+    <Property Name="tien" Type="nvarchar" MaxLength="100" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="danhmuc_sp">
+    <Key>
+      <PropertyRef Name="iddm" />
+    </Key>
+    <Property Name="iddm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendm" Type="nvarchar" MaxLength="100" />
+    <Property Name="hinhanh" Type="nvarchar" MaxLength="100" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="donhang">
+    <Key>
+      <PropertyRef Name="iddh" />
+    </Key>
+    <Property Name="iddh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idtk" Type="int" />
+    <Property Name="idgh" Type="int" />
+    <Property Name="loinhan" Type="nvarchar" MaxLength="100" />
+    <Property Name="ngaygio" Type="nvarchar" MaxLength="100" />
+    <Property Name="hanhchinh" Type="nvarchar" MaxLength="100" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="giohang">
+    <Key>
+      <PropertyRef Name="idgh" />
+    </Key>
+    <Property Name="idgh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idtk" Type="int" />
+    <Property Name="idsp" Type="int" />
+    <Property Name="sl" Type="int" />
+    <Property Name="chon" Type="nvarchar" MaxLength="100" />
+    <Property Name="giax1" Type="nvarchar" MaxLength="100" />
+    <Property Name="tongtien" Type="int" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="san_pham">
+    <Key>
+      <PropertyRef Name="idsp" />
+    </Key>
+    <Property Name="idsp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iddm" Type="int" />
+    <Property Name="tensp" Type="nvarchar" MaxLength="100" />
+    <Property Name="giatien" Type="nvarchar" MaxLength="100" />
+    <Property Name="hinhanh" Type="nvarchar" MaxLength="100" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tk">
+    <Key>
+      <PropertyRef Name="idtk" />
+    </Key>
+    <Property Name="idtk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="100" />
+    <Property Name="taikhoan" Type="nvarchar" MaxLength="100" />
+    <Property Name="mk" Type="nvarchar" MaxLength="100" />
+    <Property Name="sdt" Type="nvarchar" MaxLength="100" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__donhang__idgh__44FF419A">
+    <End Role="giohang" Type="Self.giohang" Multiplicity="0..1" />
+    <End Role="donhang" Type="Self.donhang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="giohang">
+        <PropertyRef Name="idgh" />
+      </Principal>
+      <Dependent Role="donhang">
+        <PropertyRef Name="idgh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__donhang__idtk__440B1D61">
+    <End Role="tk" Type="Self.tk" Multiplicity="0..1" />
+    <End Role="donhang" Type="Self.donhang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tk">
+        <PropertyRef Name="idtk" />
+      </Principal>
+      <Dependent Role="donhang">
+        <PropertyRef Name="idtk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__giohang__idsp__412EB0B6">
+    <End Role="san_pham" Type="Self.san_pham" Multiplicity="0..1" />
+    <End Role="giohang" Type="Self.giohang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="san_pham">
+        <PropertyRef Name="idsp" />
+      </Principal>
+      <Dependent Role="giohang">
+        <PropertyRef Name="idsp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__giohang__idtk__403A8C7D">
+    <End Role="tk" Type="Self.tk" Multiplicity="0..1" />
+    <End Role="giohang" Type="Self.giohang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tk">
+        <PropertyRef Name="idtk" />
+      </Principal>
+      <Dependent Role="giohang">
+        <PropertyRef Name="idtk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__san_pham__iddm__3D5E1FD2">
+    <End Role="danhmuc_sp" Type="Self.danhmuc_sp" Multiplicity="0..1" />
+    <End Role="san_pham" Type="Self.san_pham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="danhmuc_sp">
+        <PropertyRef Name="iddm" />
+      </Principal>
+      <Dependent Role="san_pham">
+        <PropertyRef Name="iddm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="csdl1ModelStoreContainer">
+    <EntitySet Name="chon" EntityType="Self.chon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="danhmuc_sp" EntityType="Self.danhmuc_sp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="donhang" EntityType="Self.donhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="giohang" EntityType="Self.giohang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="san_pham" EntityType="Self.san_pham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tk" EntityType="Self.tk" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__donhang__idgh__44FF419A" Association="Self.FK__donhang__idgh__44FF419A">
+      <End Role="giohang" EntitySet="giohang" />
+      <End Role="donhang" EntitySet="donhang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__donhang__idtk__440B1D61" Association="Self.FK__donhang__idtk__440B1D61">
+      <End Role="tk" EntitySet="tk" />
+      <End Role="donhang" EntitySet="donhang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__giohang__idsp__412EB0B6" Association="Self.FK__giohang__idsp__412EB0B6">
+      <End Role="san_pham" EntitySet="san_pham" />
+      <End Role="giohang" EntitySet="giohang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__giohang__idtk__403A8C7D" Association="Self.FK__giohang__idtk__403A8C7D">
+      <End Role="tk" EntitySet="tk" />
+      <End Role="giohang" EntitySet="giohang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__san_pham__iddm__3D5E1FD2" Association="Self.FK__san_pham__iddm__3D5E1FD2">
+      <End Role="danhmuc_sp" EntitySet="danhmuc_sp" />
+      <End Role="san_pham" EntitySet="san_pham" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

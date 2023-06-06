@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qlpizzaModelStoreContainer" CdmEntityContainer="qlpizzaEntities14">
+    <EntitySetMapping Name="chitiethoadonbans">
+      <EntityTypeMapping TypeName="qlpizzaModel.chitiethoadonban">
+        <MappingFragment StoreEntitySet="chitiethoadonban">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="danhgias">
+      <EntityTypeMapping TypeName="qlpizzaModel.danhgia">
+        <MappingFragment StoreEntitySet="danhgia">
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="sao" ColumnName="sao" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giohangs">
+      <EntityTypeMapping TypeName="qlpizzaModel.giohang">
+        <MappingFragment StoreEntitySet="giohang">
+          <ScalarProperty Name="matk" ColumnName="matk" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="giasp" ColumnName="giasp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hoadonbans">
+      <EntityTypeMapping TypeName="qlpizzaModel.hoadonban">
+        <MappingFragment StoreEntitySet="hoadonban">
+          <ScalarProperty Name="mahdb" ColumnName="mahdb" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="ngaydat" ColumnName="ngaydat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="khachhangs">
+      <EntityTypeMapping TypeName="qlpizzaModel.khachhang">
+        <MappingFragment StoreEntitySet="khachhang">
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="tk" ColumnName="tk" />
+          <ScalarProperty Name="mk" ColumnName="mk" />
+          <ScalarProperty Name="tenkh" ColumnName="tenkh" />
+          <ScalarProperty Name="Gioitinh" ColumnName="Gioitinh" />
+          <ScalarProperty Name="namsinh" ColumnName="namsinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+          <ScalarProperty Name="vaitro" ColumnName="vaitro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanphams">
+      <EntityTypeMapping TypeName="qlpizzaModel.sanpham">
+        <MappingFragment StoreEntitySet="sanpham">
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="donvi" ColumnName="donvi" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tinnhans">
+      <EntityTypeMapping TypeName="qlpizzaModel.tinnhan">
+        <MappingFragment StoreEntitySet="tinnhan">
+          <ScalarProperty Name="matinnhan" ColumnName="matinnhan" />
+          <ScalarProperty Name="manhan" ColumnName="manhan" />
+          <ScalarProperty Name="magui" ColumnName="magui" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

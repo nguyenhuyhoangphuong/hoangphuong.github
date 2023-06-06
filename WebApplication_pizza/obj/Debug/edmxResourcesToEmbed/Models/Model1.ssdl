@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qlpizzaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chitiethoadonban">
+    <Key>
+      <PropertyRef Name="mahdb" />
+      <PropertyRef Name="masp" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="masp" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="dongia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="soluong" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="danhgia">
+    <Key>
+      <PropertyRef Name="masp" />
+    </Key>
+    <Property Name="masp" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="sao" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="noidung" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="giohang">
+    <Key>
+      <PropertyRef Name="matk" />
+      <PropertyRef Name="masp" />
+    </Key>
+    <Property Name="matk" Type="int" Nullable="false" />
+    <Property Name="masp" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="soluong" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="hinhanh" Type="varchar(max)" Nullable="false" />
+    <Property Name="tensp" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="giasp" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hoadonban">
+    <Key>
+      <PropertyRef Name="mahdb" />
+    </Key>
+    <Property Name="mahdb" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="makh" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tinhtrang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ngaydat" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="khachhang">
+    <Key>
+      <PropertyRef Name="makh" />
+    </Key>
+    <Property Name="makh" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tk" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="mk" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="tenkh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gioitinh" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="namsinh" Type="date" Nullable="false" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sodienthoai" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="vaitro" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="sanpham">
+    <Key>
+      <PropertyRef Name="masp" />
+    </Key>
+    <Property Name="masp" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tensp" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="donvi" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="mota" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="hinhanh" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="maloai" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tinnhan">
+    <Key>
+      <PropertyRef Name="matinnhan" />
+    </Key>
+    <Property Name="matinnhan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="manhan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="magui" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="noidung" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__chitietho__mahdb__31EC6D26">
+    <End Role="hoadonban" Type="Self.hoadonban" Multiplicity="1" />
+    <End Role="chitiethoadonban" Type="Self.chitiethoadonban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadonban">
+        <PropertyRef Name="mahdb" />
+      </Principal>
+      <Dependent Role="chitiethoadonban">
+        <PropertyRef Name="mahdb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="qlpizzaModelStoreContainer">
+    <EntitySet Name="chitiethoadonban" EntityType="Self.chitiethoadonban" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="danhgia" EntityType="Self.danhgia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="giohang" EntityType="Self.giohang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hoadonban" EntityType="Self.hoadonban" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sanpham" EntityType="Self.sanpham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tinnhan" EntityType="Self.tinnhan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__chitietho__mahdb__31EC6D26" Association="Self.FK__chitietho__mahdb__31EC6D26">
+      <End Role="hoadonban" EntitySet="hoadonban" />
+      <End Role="chitiethoadonban" EntitySet="chitiethoadonban" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

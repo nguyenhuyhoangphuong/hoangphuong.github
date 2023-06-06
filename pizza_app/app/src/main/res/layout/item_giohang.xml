@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:background="@drawable/button_item"
+    android:weightSum="7"
+    >
+<ImageView
+    android:padding="5dp"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="3"
+    android:id="@+id/anh_giohang"
+    />
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_weight="4"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Pizza chicken"
+          android:gravity="center"
+          android:id="@+id/ten_gio"
+          android:fontFamily="@font/font_1"
+          android:textSize="30dp"
+          />
+      <LinearLayout
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:fontFamily="@font/font_1"
+              android:text="Giá:"
+              android:textColor="#FF5722"
+              android:textSize="25dp" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:fontFamily="@font/font_1"
+              android:text="100k"
+              android:id="@+id/gia_giohang"
+              android:textColor="#4CAF50"
+              android:textSize="25dp" />
+      </LinearLayout>
+      <LinearLayout
+          android:layout_marginTop="5dp"
+          android:id="@+id/linearLayout14"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center"
+          >
+          <ImageView
+              android:id="@+id/cong_gio"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@drawable/plus" />
+
+          <TextView
+              android:layout_width="45dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:gravity="center"
+              android:text="1"
+              android:id="@+id/soluong_gio"
+              android:textSize="20dp" />
+
+          <ImageView
+              android:id="@+id/tru_gio"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@drawable/minus" />
+      </LinearLayout>
+      <View
+          android:layout_marginTop="5dp"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="#FF5722"
+          />
+      <LinearLayout
+          android:layout_marginTop="5dp"
+          android:layout_width="match_parent"
+          android:layout_marginBottom="3dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:id="@+id/chitiet"
+              android:layout_marginRight="3dp"
+              android:layout_marginLeft="3dp"
+              android:background="#D5D0D0"
+              android:layout_marginBottom="3dp"
+              android:text="Thanh toán"
+              />
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginTop="5dp"
+              android:text="Xóa"
+              android:layout_marginRight="3dp"
+              android:layout_marginLeft="3dp"
+              android:id="@+id/xoa"
+              android:textColor="@color/white"
+              android:background="#FF9800"
+              />
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="#FF5722"
+          />
+  </LinearLayout>
+</LinearLayout>

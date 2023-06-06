@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aeb3670efda84a049cf9b5753c231b0b" Name="Diagram1">
+        <EntityTypeShape EntityType="csdl1Model.chon" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdl1Model.danhmuc_sp" Width="1.5" PointX="1.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdl1Model.donhang" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdl1Model.giohang" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdl1Model.san_pham" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdl1Model.tk" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="csdl1Model.FK__san_pham__iddm__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="csdl1Model.FK__donhang__idgh__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="csdl1Model.FK__donhang__idtk__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="csdl1Model.FK__giohang__idsp__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="csdl1Model.FK__giohang__idtk__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

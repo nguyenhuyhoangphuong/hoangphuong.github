@@ -1,0 +1,66 @@
+﻿@model csdl.Models.donhang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>donhang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idtk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idtk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idgh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idgh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.loinhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loinhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaygio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaygio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hanhchinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hanhchinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.iddh }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

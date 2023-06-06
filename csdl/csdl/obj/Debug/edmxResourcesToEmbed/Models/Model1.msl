@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="csdl1ModelStoreContainer" CdmEntityContainer="csdl1Entities">
+    <EntitySetMapping Name="chons">
+      <EntityTypeMapping TypeName="csdl1Model.chon">
+        <MappingFragment StoreEntitySet="chon">
+          <ScalarProperty Name="id_l" ColumnName="id_l" />
+          <ScalarProperty Name="the_loai" ColumnName="the_loai" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="tien" ColumnName="tien" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="danhmuc_sp">
+      <EntityTypeMapping TypeName="csdl1Model.danhmuc_sp">
+        <MappingFragment StoreEntitySet="danhmuc_sp">
+          <ScalarProperty Name="iddm" ColumnName="iddm" />
+          <ScalarProperty Name="tendm" ColumnName="tendm" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="donhangs">
+      <EntityTypeMapping TypeName="csdl1Model.donhang">
+        <MappingFragment StoreEntitySet="donhang">
+          <ScalarProperty Name="iddh" ColumnName="iddh" />
+          <ScalarProperty Name="idtk" ColumnName="idtk" />
+          <ScalarProperty Name="idgh" ColumnName="idgh" />
+          <ScalarProperty Name="loinhan" ColumnName="loinhan" />
+          <ScalarProperty Name="ngaygio" ColumnName="ngaygio" />
+          <ScalarProperty Name="hanhchinh" ColumnName="hanhchinh" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giohangs">
+      <EntityTypeMapping TypeName="csdl1Model.giohang">
+        <MappingFragment StoreEntitySet="giohang">
+          <ScalarProperty Name="idgh" ColumnName="idgh" />
+          <ScalarProperty Name="idtk" ColumnName="idtk" />
+          <ScalarProperty Name="idsp" ColumnName="idsp" />
+          <ScalarProperty Name="sl" ColumnName="sl" />
+          <ScalarProperty Name="chon" ColumnName="chon" />
+          <ScalarProperty Name="giax1" ColumnName="giax1" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="san_pham">
+      <EntityTypeMapping TypeName="csdl1Model.san_pham">
+        <MappingFragment StoreEntitySet="san_pham">
+          <ScalarProperty Name="idsp" ColumnName="idsp" />
+          <ScalarProperty Name="iddm" ColumnName="iddm" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="giatien" ColumnName="giatien" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tks">
+      <EntityTypeMapping TypeName="csdl1Model.tk">
+        <MappingFragment StoreEntitySet="tk">
+          <ScalarProperty Name="idtk" ColumnName="idtk" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="mk" ColumnName="mk" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

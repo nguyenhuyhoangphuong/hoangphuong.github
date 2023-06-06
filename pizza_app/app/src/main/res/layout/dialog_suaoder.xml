@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="390dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tình trạng đơn hàng"
+        android:fontFamily="@font/font_1"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FFC107"
+        />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:weightSum="7"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã đơn hàng: "
+                android:textColor="#FF5722"
+                android:fontFamily="@font/font_1"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/madonhang"
+                android:textSize="20dp"
+                android:fontFamily="@font/font_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tình trạng đơn hàng: "
+                android:textColor="#FF5722"
+                android:fontFamily="@font/font_1"
+                android:textSize="30dp" />
+            <Spinner
+                android:fontFamily="@font/font_1"
+                android:id="@+id/tinhtrangql"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Xong"
+        android:id="@+id/xacnhantinhtrang"
+        android:textColor="@color/white"
+        android:fontFamily="@font/font_1"
+        android:textSize="25dp"
+        android:background="@drawable/button_dang_nhap_1"
+        />
+</LinearLayout>

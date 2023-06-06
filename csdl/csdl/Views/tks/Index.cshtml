@@ -1,0 +1,57 @@
+﻿@model IEnumerable<csdl.Models.tk>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taikhoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sdt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taikhoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sdt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idtk }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idtk }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idtk })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết đơn hàng"
+            android:fontFamily="@font/font_1"
+            android:textSize="33dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="560K"
+            android:id="@+id/tong_chitiet"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="#F46565"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:id="@+id/dschitiet"
+        android:text="- Pizza Chesse(89k)- Số lượng: 2 \n- Coca(10k)- Số lượng: 4"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phương thức thanh toán"
+        android:textSize="27dp"
+        android:fontFamily="@font/font_1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/khung_sp"
+        android:text="Trực tiếp"
+        android:id="@+id/ttchitiet"
+        android:padding="5dp"
+        android:gravity="center|left"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên"
+        android:textSize="27dp"
+        android:fontFamily="@font/font_1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/khung_sp"
+        android:text="Nguyễn Duy Khánh"
+        android:id="@+id/tenct"
+        android:padding="5dp"
+        android:gravity="center|left"
+        android:textSize="20dp"
+        />
+    <TextView
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Số điện thoại"
+    android:textSize="27dp"
+    android:fontFamily="@font/font_1"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/khung_sp"
+        android:text="0848032688"
+        android:id="@+id/dtct"
+        android:padding="5dp"
+        android:gravity="center|left"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ"
+        android:textSize="27dp"
+        android:fontFamily="@font/font_1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/khung_sp"
+        android:text="Trần Cao- Phù Cừ- Hưng Yên"
+        android:padding="5dp"
+        android:id="@+id/diachict"
+        android:gravity="center|left"
+        android:textSize="20dp"
+        />
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:text="Hủy bỏ"
+            android:id="@+id/huybo"
+            android:background="#CFCFCF"
+            />
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:text="Đã nhận"
+            android:id="@+id/danhan"
+            android:textColor="@color/white"
+            android:background="#68AA1C"
+            />
+    </LinearLayout>
+</LinearLayout>

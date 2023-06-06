@@ -1,0 +1,63 @@
+﻿@model IEnumerable<csdl.Models.donhang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idtk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idgh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loinhan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaygio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hanhchinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idtk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idgh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loinhan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaygio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hanhchinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.iddh }) |
+            @Html.ActionLink("Details", "Details", new { id=item.iddh }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.iddh })
+        </td>
+    </tr>
+}
+
+</table>

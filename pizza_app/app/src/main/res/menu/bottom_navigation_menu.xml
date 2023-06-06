@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:iconTint="#FF5722"
+        android:icon="@drawable/pizza"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/toi"
+        android:enabled="true"
+        android:iconTint="#FF5722"
+        android:icon="@drawable/pizza_p"
+        android:title="@string/toi"/>
+    <item
+        android:id="@+id/sp"
+        android:enabled="true"
+        android:iconTint="#FF5722"
+        android:icon="@drawable/dienthoai"
+        android:title="@string/Support"/>
+</menu>

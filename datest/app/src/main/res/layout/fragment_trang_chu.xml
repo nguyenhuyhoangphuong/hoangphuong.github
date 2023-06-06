@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.Trang_chu.trang_chu">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/timkiem"
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rectangle_5"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:focusable="false"
+                android:hint="Tìm kiếm"
+                android:paddingStart="20dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:cardCornerRadius="30dp"
+                    android:layout_height="180dp" >
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        app:iss_period="1000"
+                        app:iss_corner_radius="30"
+                        app:iss_auto_cycle="true"
+                        app:iss_delay="1000"
+                        >
+                    </com.denzcoskun.imageslider.ImageSlider>
+
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Danh mục sản phẩm"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_1"
+                android:layout_width="match_parent" android:paddingBottom="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Sản Phẩm"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_2" android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>
